@@ -1,9 +1,9 @@
-﻿using eProdaja.Services;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using eProdaja.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace eProdaja.Controllers
 {
@@ -19,7 +19,7 @@ namespace eProdaja.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Proizvod>Get()
+        public IEnumerable<Proizvod> Get()
         {
             return _proizvodService.Get();
         }
@@ -39,8 +39,15 @@ namespace eProdaja.Controllers
         [HttpPut("{id}")]
         public Proizvod Update(int id, Proizvod proizvod)
         {
-            return _proizvodService.Update(id,proizvod);
+            return _proizvodService.Update(id, proizvod);
         }
     }
-   
+
+
+    public class Proizvod
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+    }
 }

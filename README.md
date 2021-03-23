@@ -1,6 +1,6 @@
-# RSII-2021
-Vježbe iz predmeta Razvoj Softvera II
+# RS2-2021
+Vježbe iz predmete RS 2 - 2021
 
 
-User: Admin
+User: admin
 Password: test
